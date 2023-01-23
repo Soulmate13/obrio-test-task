@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import ExpertPanel from '@/src/components/organisms/ExpertPanel';
-import useExpert from '@/src/hooks/useExpert/useExpert';
+import useExpert from '@/src/hooks/useExpert';
 import { getExpert } from '@/src/api/expert';
 import MainLayout from '@/src/components/templates/MainLayout';
 import { API_ROUTES } from '@/src/constants/api';

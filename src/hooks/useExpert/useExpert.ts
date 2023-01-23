@@ -1,4 +1,3 @@
-import { b } from 'msw/lib/SetupApi-f4099ef3';
 import useSWR from 'swr';
 import { API_ROUTES } from '@/src/constants/api';
 import { getExpert } from '@/src/api/expert';

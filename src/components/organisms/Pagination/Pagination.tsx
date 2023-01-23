@@ -31,8 +31,6 @@ const Pagination = forwardRef((
     onPageChange(selected + 1);
   };
 
-  console.log(currentPage, 'currentPage');
-
   return (
     <ReactPaginate
       pageCount={pageCount}
