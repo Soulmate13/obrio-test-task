@@ -1,0 +1,56 @@
+.label {
+  display: block;
+  text-align: center;
+  font-family: var(--font-text);
+}
+
+.specialization {
+  background-color: var(--color-label-specialization);
+  color: var(--color-title);
+  font-size: 14px;
+  line-height: 143%;
+  border-radius: 20px;
+  padding: 4px 10px;
+  margin-right: 6px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+    line-height: 130%;
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+  }
+}
+
+.status {
+  padding: 2px 10px;
+  color: var(--color-text-label);
+  border-radius: 22px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 135%;
+
+  @media screen and (max-width: 768px) {
+    padding: 1px 10px;
+    font-size: 12px;
+    line-height: 130%;
+  }
+}
+
+.online {
+  background-color: var(--color-label-online);
+}
+
+.offline {
+  background-color: var(--color-label-offline);
+}
+
+.busy {
+  background-color: var(--color-label-busy);
+}

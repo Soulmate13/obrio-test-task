@@ -1,0 +1,40 @@
+.expertsSection {
+  height: 100%;
+  padding-top: 110px;
+
+  background: var(--gradient-main);
+
+  .expertsContainer {
+    max-width: 1028px;
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    .expertsHeading {
+      font-family: var(--font-heading);
+      color: var(--color-heading);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 120%;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 54px;
+
+    .expertsContainer {
+      padding: 0 15px;
+      max-width: 100%;
+
+      .expertsHeading {
+        font-size: 22px;
+      }
+    }
+  }
+}
+

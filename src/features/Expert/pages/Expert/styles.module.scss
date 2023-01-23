@@ -1,0 +1,47 @@
+.expertPage {
+  height: 100%;
+
+  .panelSection {
+    background: var(--color-secondary);
+    padding-top: 180px;
+    padding-bottom: 80px;
+
+  }
+
+  .aboutSection {
+    background: var(--color-primary);
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .panelSection, .aboutSection {
+    .panelContainer {
+      max-width: 1028px;
+      width: 100%;
+      height: 100%;
+
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .panelSection {
+      padding-top: 94px;
+      padding-bottom: 40px;
+    }
+
+    .aboutSection {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .panelSection, .aboutSection {
+      .panelContainer {
+        max-width: 100%;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+

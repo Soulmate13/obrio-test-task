@@ -1,0 +1,56 @@
+@import 'pagination';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100vw;
+}
+
+.nebulaApp {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg {
+  display: inline-block;
+}
+
+:root {
+  --color-primary: #24244f;
+  --color-secondary: #141333;
+  --color-skeleton-start: #3a237280;
+  --color-skeleton-end: #20226180;
+  --color-text: #e8e8fc;
+  --color-title: #fafafa;
+  --color-heading: #e2e4e7;
+  --color-error: #e40d15;
+  --color-text-label: #ffffff;
+  --color-text-experience: #cdcdcd;
+  --color-label-online: #4dab75;
+  --color-label-specialization: #7270c0;
+  --color-label-busy: #3c8fa9;
+  --color-label-offline: #828282;
+  --color-link: #8e8cf0;
+
+  --gradient-main: linear-gradient(180deg, var(--color-secondary) 0%, #202261 70.63%, #3a237a 100%);
+  --gradient-dot: linear-gradient(90.6deg, #6a4dbc 0.47%, #f2994a 137.94%);
+}

@@ -1,0 +1,11 @@
+User-agent: AdsBot-Google
+Allow: /experts
+Allow: /expert
+Disallow: /400
+Disallow: /500
+
+User-agent: *
+Allow: /experts
+Allow: /expert
+Disallow: /400
+Disallow: /500

@@ -1,0 +1,31 @@
+.expertsSubtitle {
+  font-family: var(--font-heading);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-heading);
+
+  margin-bottom: 80px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.expertsPanels {
+  margin-bottom: 60px;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  .expertsError {
+    font-family: var(--font-heading);
+    color: var(--color-error);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+  }
+}

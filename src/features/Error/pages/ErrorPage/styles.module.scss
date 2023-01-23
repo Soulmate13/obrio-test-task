@@ -1,0 +1,36 @@
+.errorContainer {
+  height: 100%;
+
+  padding-top: 110px;
+
+  background: var(--gradient-main);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .errorHeading {
+    font-family: var(--font-heading);
+    color: var(--color-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+
+    max-width: 80%;
+    width: 100%;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 54px;
+
+    .errorHeading {
+      font-size: 30px;
+    }
+  }
+}

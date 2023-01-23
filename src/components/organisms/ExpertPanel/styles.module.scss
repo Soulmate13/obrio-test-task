@@ -1,0 +1,288 @@
+.expertPanel {
+  display: grid;
+  grid-template-columns: 124px 1fr 304px;
+  grid-template-rows: minmax(124px, auto) 1fr;
+  grid-template-areas:
+    'image name experience'
+    'description description experience';
+
+  position: relative;
+
+  min-height: 216px;
+  max-height: 400px;
+  margin-bottom: 16px;
+
+  border-radius: 16px;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+
+  transition: transform 0.3s linear;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 98px 1fr;
+    grid-template-rows: minmax(67px, auto) 1fr;
+    grid-template-areas:
+    'image name'
+    'image experience';
+
+    min-height: 142px;
+    max-height: 260px;
+    padding: 16px;
+
+    border: none;
+  }
+
+  .panelImage {
+    grid-area: image;
+
+    position: relative;
+
+    margin-top: 24px;
+    margin-left: 24px;
+
+    .imageWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      width: 100px;
+      height: 100px;
+
+      img {
+        border-radius: 50%;
+
+        overflow: hidden;
+      }
+
+      .labelWrapper {
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 80px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0;
+
+      .imageWrapper {
+        width: 82px;
+        height: 82px;
+
+        img {
+          border-radius: 12px;
+        }
+
+        .labelWrapper {
+          position: static;
+          transform: none;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  .panelName {
+    grid-area: name;
+
+    padding-top: 24px;
+    padding-left: 24px;
+
+    .expertName {
+      font-family: var(--font-heading);
+      color: var(--color-title);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 135%;
+
+      margin-bottom: 20px;
+    }
+
+    .specializationWrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+
+      .expertName {
+        font-size: 18px;
+
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .panelDescription {
+    grid-area: description;
+
+    font-family: var(--font-text);
+
+    display: flex;
+
+    padding-left: 33px;
+    padding-bottom: 24px;
+    padding-right: 40px;
+    margin-top: 24px;
+
+    .descriptionTitle {
+      min-width: 120px;
+      max-width: 120px;
+
+      padding-right: 40px;
+
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--color-title);
+    }
+
+    .descriptionText {
+      color: var(--color-text);
+      font-weight: normal;
+      font-size: 14px;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+  }
+
+  .panelExperience {
+    grid-area: experience;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+
+    padding: 38px 49px 24px 24px;
+
+    background-color: var(--color-secondary);
+
+    font-family: var(--font-text);
+
+    a {
+      svg {
+        margin-left: 7px;
+      }
+
+      .linkText {
+        display: flex;
+        align-items: center;
+
+        color: var(--color-link);
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 135%;
+      }
+
+    }
+
+    .experienceContainer {
+      margin-bottom: auto;
+
+      .experienceRow {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 20px;
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .experienceText {
+          color: var(--color-text-experience);
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 150%;
+
+          margin-left: 10px;
+
+          b {
+            font-weight: 600;
+            color: var(--color-title);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      border: none;
+
+      padding: 0;
+
+      background-color: var(--color-primary);
+
+      a {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+
+        svg {
+          margin: 0;
+
+          width: 20px;
+          height: 20px;
+
+          path {
+            fill: var(--color-text-label);
+          }
+        }
+
+        .linkText {
+          display: none;
+        }
+      }
+
+      .experienceContainer {
+        .experienceRow {
+          margin-bottom: 4px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .experienceText {
+            font-size: 12px;
+            line-height: 130%;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+  }
+}
